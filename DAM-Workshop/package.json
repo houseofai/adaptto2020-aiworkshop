@@ -1,0 +1,28 @@
+{
+  "name": "WelcomeCopperCrab",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "@adobe/asset-compute-sdk": "^2.2.1",
+    "@adobe/asset-compute-xmp": "^1.0.0",
+    "axios": "^0.19.2",
+    "dist-exiftool": "^10.53.0",
+    "image-data-uri": "^2.0.1",
+    "node-exiftool": "^2.3.0",
+    "piexifjs": "^1.0.6",
+    "webtask-tools": "^3.4.1"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "@openwhisk/wskdebug": "^1.2.0",
+    "@adobe/aio-cli-plugin-asset-compute": "^1.3.8"
+  },
+  "scripts": {
+    "test": "jest --passWithNoTests ./test && adobe-asset-compute test-worker",
+    "e2e": "jest --collectCoverage=false --testRegex ./e2e",
+    "post-app-run": "adobe-asset-compute devtool"
+  },
+  "engines": {
+    "node": "^10 || ^12"
+  }
+}

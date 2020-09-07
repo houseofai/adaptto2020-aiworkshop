@@ -52,7 +52,9 @@ Please install the following required tools:
 
 4. Inside the Firefly Project, choose a workspace and subscribe to the services needed for Asset Compute:
 
-   - Click on `"Add to Project" => "API"` and add each of these services: `"Asset Compute"`, `"IO Events"`, `"IO Events Management"`
+   - Click on `"Add to Project" => "API"` and add each of these services: `"Asset Compute"`, `"IO Events"`, `"IO Events Management", Content and Commerce AI(Select Product Profile when prompted)`
+
+     
 
    *While adding the first API, you will be prompted to create a private key. Please save this somewhere safe on your machine. You will need this referenced in [the .env file](https://git.corp.adobe.com/nui/nui/blob/master/doc/developer/CustomWorkerDeveloperGuide.md#developer-tool-credentials) to use the developer tool.*
 

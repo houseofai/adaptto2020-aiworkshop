@@ -84,3 +84,112 @@ To deploy the worker, run the following command (This is not required for this l
 ```
 aio app deploy
 ```
+
+## Color Extraction 
+
+The color extraction service, when given an image, can compute a histogram of pixel colors and sort them by dominant colors into buckets. The colors in the image pixels are bucketed into 40 predominant colors which are representative of the color spectrum. A histogram of color values is then computed among those 40 colors
+
+### Getting Started 
+
+1. Go To project inside  [Console.adobe.io](https://console.adobe.io/projects)
+
+2. Make sure you have selected adobe-odyssee as your current organisation 
+
+3. Depending on your assignment  open AEM-pxxx-exxx91 project 
+
+4. ![image-20200907194723236](/Users/sanmishr/TechLabs/LabDocumentation /adaptto2020-aiworkshop/DAM-Workshop/image-20200907194723236.png)
+
+5. Click Download on the top right corner 
+
+6. ![image-20200907195151095](/Users/sanmishr/TechLabs/LabDocumentation /adaptto2020-aiworkshop/DAM-Workshop/image-20200907195151095.png)
+
+7. Replace the content of index.js and adapt the content of package.json accordingly ( Do not replace package.json as is ,only ad the missing dependecies )
+
+8. Goto the parent directory of the project and execute npm install it will update the project with missing depedencies 
+
+9. aio app use <path to Adobe I/O Developer Console configuration file from step 5 above> // *This will setup your .env to point at the Firefly project and workspace*
+
+10. $     aio app deploy // *this will deploy the application* 
+
+    ![image-20200907200539570](/Users/sanmishr/TechLabs/LabDocumentation /adaptto2020-aiworkshop/DAM-Workshop/image-20200907200539570.png)
+
+    Note the URL endpoint for your new Firefly App. We’ll use this when creating a processing profile in AEM
+
+
+
+#### **Create a Processing Profile**
+
+1. From     the AEM > Tools > Assets > Processing Profiles
+2. Click     Create
+3. Give     your Processing Profile a title, and then click on "Custom" tab
+4. Enable     "Create Metadata Rendition" toggle
+5. For     "Endpoint URL" input the URL of the worker as seen after     running aio app deploy for your Firefly application
+
+![A screenshot of a cell phone  Description automatically generated](/Users/sanmishr/TechLabs/LabDocumentation /adaptto2020-aiworkshop/DAM-Workshop/clip_image001.png)
+
+1. Click     on Save
+
+ 
+
+ 
+
+#### **Update Metadata Schema to support output of your Custom Worker**
+
+***\**** *Note: this schema should be configured/customized to meet your own use case. The instructions below are to support the simple color extraction custom worker included **
+
+- From the AEM > Tools > Assets >     Metadata Schemas
+
+- Select "default"
+
+- Click on Edit
+
+- Click on + to add a new Sensei     CCAI tab
+
+- Click on "Build Form"
+
+- Drag "Single Line Text" on the     form
+
+- - Name: Color Extraction
+  - Map to      property: ./jcr:content/metadata/ccai:colorExtraction
+
+- Click on "Build Form" again,     Drag "Multi Value Text" on the form
+
+- - Name: Color Extraction List
+  - Map to      property: ./jcr:content/metadata/ccai:colorExtractionArray
+
+![A screenshot of a social media post  Description automatically generated](/Users/sanmishr/TechLabs/LabDocumentation /adaptto2020-aiworkshop/DAM-Workshop/clip_image002.png)
+
+- Click on Save
+
+ 
+
+#### **Associate Processing Profile with Folder**
+
+- From the AEM > Navigation > Assets 
+- Create a folder for testing this worker,     if one does not exist
+- Hover the folder and click the check mark
+- Click "Properties" in the top     pane
+- Click "Asset Processing" and     select the new Processing Profile that you created in the previous steps
+
+![A screenshot of a cell phone  Description automatically generated](/Users/sanmishr/TechLabs/LabDocumentation /adaptto2020-aiworkshop/DAM-Workshop/clip_image003.png)
+
+- Click Save
+
+ 
+
+**Test it!**
+
+- Upload a PNG or JPG to the folder that     you set up in Step 2.
+
+- Wait for the asset to stop processing
+
+- Hover over the asset and click on the i
+
+- - Or alternatively select the asset and      click on Properties
+
+- Switch to the Sensei CCAI tab
+
+![A screenshot of a social media post  Description automatically generated](/Users/sanmishr/TechLabs/LabDocumentation /adaptto2020-aiworkshop/DAM-Workshop/clip_image004.png)
+
+- You should see the list of extracted     colors
+
