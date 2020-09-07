@@ -97,11 +97,11 @@ The color extraction service, when given an image, can compute a histogram of pi
 
 3. Depending on your assignment  open AEM-pxxx-exxx91 project 
 
-4. ![image-20200907194723236](/Users/sanmishr/TechLabs/LabDocumentation /adaptto2020-aiworkshop/DAM-Workshop/image-20200907194723236.png)
+4. image-20200907194723236
 
 5. Click Download on the top right corner 
 
-6. ![image-20200907195151095](/Users/sanmishr/TechLabs/LabDocumentation /adaptto2020-aiworkshop/DAM-Workshop/image-20200907195151095.png)
+6. image-20200907195151095
 
 7. Replace the content of index.js and adapt the content of package.json accordingly ( Do not replace package.json as is ,only ad the missing dependecies )
 
@@ -111,7 +111,7 @@ The color extraction service, when given an image, can compute a histogram of pi
 
 10. $     aio app deploy // *this will deploy the application* 
 
-    ![image-20200907200539570](/Users/sanmishr/TechLabs/LabDocumentation /adaptto2020-aiworkshop/DAM-Workshop/image-20200907200539570.png)
+    image-20200907200539570
 
     Note the URL endpoint for your new Firefly App. We’ll use this when creating a processing profile in AEM
 
@@ -125,7 +125,7 @@ The color extraction service, when given an image, can compute a histogram of pi
 4. Enable     "Create Metadata Rendition" toggle
 5. For     "Endpoint URL" input the URL of the worker as seen after     running aio app deploy for your Firefly application
 
-![A screenshot of a cell phone  Description automatically generated](/Users/sanmishr/TechLabs/LabDocumentation /adaptto2020-aiworkshop/DAM-Workshop/clip_image001.png)
+A screenshot of a cell phone  Description automatically generated
 
 1. Click     on Save
 
@@ -157,7 +157,7 @@ The color extraction service, when given an image, can compute a histogram of pi
 - - Name: Color Extraction List
   - Map to      property: ./jcr:content/metadata/ccai:colorExtractionArray
 
-![A screenshot of a social media post  Description automatically generated](/Users/sanmishr/TechLabs/LabDocumentation /adaptto2020-aiworkshop/DAM-Workshop/clip_image002.png)
+A screenshot of a social media post  Description automatically generated
 
 - Click on Save
 
@@ -171,7 +171,7 @@ The color extraction service, when given an image, can compute a histogram of pi
 - Click "Properties" in the top     pane
 - Click "Asset Processing" and     select the new Processing Profile that you created in the previous steps
 
-![A screenshot of a cell phone  Description automatically generated](/Users/sanmishr/TechLabs/LabDocumentation /adaptto2020-aiworkshop/DAM-Workshop/clip_image003.png)
+A screenshot of a cell phone  Description automatically generated
 
 - Click Save
 
@@ -189,7 +189,7 @@ The color extraction service, when given an image, can compute a histogram of pi
 
 - Switch to the Sensei CCAI tab
 
-![A screenshot of a social media post  Description automatically generated](/Users/sanmishr/TechLabs/LabDocumentation /adaptto2020-aiworkshop/DAM-Workshop/clip_image004.png)
+A screenshot of a social media post  Description automatically generated
 
 - You should see the list of extracted     colors
 
