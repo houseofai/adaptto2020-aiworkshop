@@ -97,7 +97,7 @@ The color extraction service, when given an image, can compute a histogram of pi
 
 3. Depending on your assignment  open AEM-pxxx-exxx91 project 
 
-4. image-20200907194723236
+4.  ![image-20200907194723236](image-20200907194723236.png)
 
 5. Click Download on the top right corner 
 
