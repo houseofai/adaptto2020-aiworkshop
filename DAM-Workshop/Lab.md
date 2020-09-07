@@ -95,25 +95,23 @@ The color extraction service, when given an image, can compute a histogram of pi
 
 2. Make sure you have selected adobe-odyssee as your current organisation 
 
-3. Depending on your assignment  open AEM-pxxx-exxx91 project 
+3. Depending on your assignment  open AEM-pxxx-exxx91 project  ![image-20200907194723236](image-20200907194723236.png)
 
-4.  ![image-20200907194723236](image-20200907194723236.png)
+4. Click Download on the top right corner 
 
-5. Click Download on the top right corner 
+   ![image-20200907195151095](Lab/image-20200907195151095.png)
 
-6. image-20200907195151095
+5. Replace the content of index.js and adapt the content of package.json accordingly ( Do not replace package.json as is ,only ad the missing dependecies )
 
-7. Replace the content of index.js and adapt the content of package.json accordingly ( Do not replace package.json as is ,only ad the missing dependecies )
+6. Goto the parent directory of the project and execute npm install it will update the project with missing depedencies 
 
-8. Goto the parent directory of the project and execute npm install it will update the project with missing depedencies 
+7. aio app use <path to Adobe I/O Developer Console configuration file from step 5 above> // *This will setup your .env to point at the Firefly project and workspace*
 
-9. aio app use <path to Adobe I/O Developer Console configuration file from step 5 above> // *This will setup your .env to point at the Firefly project and workspace*
+8. $     aio app deploy // *this will deploy the application* 
 
-10. $     aio app deploy // *this will deploy the application* 
+   ![image-20200907200539570](Lab/image-20200907200539570.png)
 
-    image-20200907200539570
-
-    Note the URL endpoint for your new Firefly App. We’ll use this when creating a processing profile in AEM
+   Note the URL endpoint for your new Firefly App. We’ll use this when creating a processing profile in AEM
 
 
 
@@ -125,9 +123,9 @@ The color extraction service, when given an image, can compute a histogram of pi
 4. Enable     "Create Metadata Rendition" toggle
 5. For     "Endpoint URL" input the URL of the worker as seen after     running aio app deploy for your Firefly application
 
-A screenshot of a cell phone  Description automatically generated
+​     ![clip_image001](Lab/clip_image001.png)
 
-1. Click     on Save
+6. Click     on Save
 
  
 
@@ -157,7 +155,7 @@ A screenshot of a cell phone  Description automatically generated
 - - Name: Color Extraction List
   - Map to      property: ./jcr:content/metadata/ccai:colorExtractionArray
 
-A screenshot of a social media post  Description automatically generated
+ ![clip_image002](Lab/clip_image002.png)
 
 - Click on Save
 
@@ -171,7 +169,7 @@ A screenshot of a social media post  Description automatically generated
 - Click "Properties" in the top     pane
 - Click "Asset Processing" and     select the new Processing Profile that you created in the previous steps
 
-A screenshot of a cell phone  Description automatically generated
+ ![clip_image003](Lab/clip_image003.png)
 
 - Click Save
 
@@ -189,7 +187,7 @@ A screenshot of a cell phone  Description automatically generated
 
 - Switch to the Sensei CCAI tab
 
-A screenshot of a social media post  Description automatically generated
+![clip_image004](Lab/clip_image004.png) 
 
 - You should see the list of extracted     colors
 
