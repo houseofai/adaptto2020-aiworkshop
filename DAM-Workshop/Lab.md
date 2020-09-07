@@ -85,6 +85,21 @@ To deploy the worker, run the following command (This is not required for this l
 aio app deploy
 ```
 
+# Content and Commerce AI overview
+
+Content and Commerce AI is a set of AI services that allow you to extract intelligent features from your content, organize and streamline content flow, and deliver more impactful, personalized experiences to your customers.
+
+All brands strive to deliver a perfect customer experience. You're constantly trying to find better answers all aspects of your customer touchpoints.
+
+Content is an essential component of these experiences. To better answer marketing questions, you must understand content and your customers' interactions with it. With Content and Commerce AI, you can learn what features of the content you provide resonates with your customers. Using these insights allows you to personalize experiences and boost KPIs.
+
+You can find more details about it [here](https://docs.adobe.com/content/help/en/experience-platform/intelligent-services/content-commerce-ai/overview.html) 
+
+This is Still in Beta , below we will try 2 features from this API  
+
+- Color Extraction 
+- Keyword Extraction 
+
 ## Color Extraction 
 
 The color extraction service, when given an image, can compute a histogram of pixel colors and sort them by dominant colors into buckets. The colors in the image pixels are bucketed into 40 predominant colors which are representative of the color spectrum. A histogram of color values is then computed among those 40 colors
@@ -190,4 +205,8 @@ The color extraction service, when given an image, can compute a histogram of pi
 ![clip_image004](Lab/clip_image004.png) 
 
 - You should see the list of extracted     colors
+
+
+
+## Keyword  Extraction (To be updated this week )
 
