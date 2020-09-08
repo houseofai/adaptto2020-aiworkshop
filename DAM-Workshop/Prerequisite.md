@@ -13,6 +13,12 @@ Asset Compute is a scalable, lightweight and extensible platform service for pro
 
 Linked here is [Project Firefly's documentation guide](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html).
 
+Asset Compute Extensibility Architecture
+
+
+
+![image-20200908175203074](Prerequisite/image-20200908175203074.png)
+
 ### Pre-requisites
 
 For testing your custom worker with the [developer tool](https://github.com/adobe/asset-compute-devtool), the following is also required:
