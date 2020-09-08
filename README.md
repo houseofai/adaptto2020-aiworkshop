@@ -1,7 +1,7 @@
 # adaptTo() 2020 - AI Workshop
 #### Europe's leading AEM Developer Conference
 -----
-## Digital Asset Management in an AI-First World - Workshop - adaptTo() 2020
+## Digital Asset Management in an AI-First World - Workshop
 ___
 
 Tuesday, 29. September 2020 17:15 - 18:45 (90 min)
