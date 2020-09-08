@@ -14,7 +14,7 @@ RUN /usr/bin/update-alternatives --set python /usr/bin/python3.7
 RUN pip3 install jupyter
 
 # Install AEMpy
-RUN pip3 install git+https://github.com/houseofai/aempy.git pandas mxnet matplotlib seaborn gluonts
+RUN pip3 install git+https://github.com/houseofai/aempy.git pandas==1.0.5 mxnet matplotlib seaborn gluonts
 
 WORKDIR /workspace
 COPY . .
