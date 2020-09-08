@@ -24,7 +24,7 @@ For testing your custom worker with the [developer tool](https://github.com/adob
   - Providing a cloud storage location is only needed for using the Asset Compute developer tool; a tool to help run tests in an environment that simulates an Asset Compute Client. You can still create, test, and deploy custom workers without developer tool.
   - This cloud storage is different than the AEM blob store.
   - This can be a shared container used by multiple developers across different projects.
-  - This will be provided to you during the lab
+  - ***This will be provided to you during the lab***
 
 ### Getting Started
 
@@ -52,9 +52,11 @@ Please install the following required tools:
 
 4. Inside the Firefly Project, choose a workspace and subscribe to the services needed for Asset Compute:
 
-   - Click on `"Add to Project" => "API"` and add each of these services: `"Asset Compute"`, `"IO Events"`, `"IO Events Management"`
+   - Click on `"Add to Project" => "API"` and add each of these services: `"Asset Compute"`, `"IO Events"`, `"IO Events Management", Content and Commerce AI(Select Product Profile when prompted)`
 
-   *While adding the first API, you will be prompted to create a private key. Please save this somewhere safe on your machine. You will need this referenced in [the .env file](https://git.corp.adobe.com/nui/nui/blob/master/doc/developer/CustomWorkerDeveloperGuide.md#developer-tool-credentials) to use the developer tool.*
+     
+
+   *While adding the first API, you will be prompted to create a private key. Please save this somewhere safe on your machine. You will need this referenced in the .env file to use the developer tool.*
 
 ### Creating a Custom Worker using the Adobe CLI
 
