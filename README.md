@@ -12,13 +12,12 @@ Adobe’s content intelligence beta services are now available for  Adobe Experi
 
 In this workshop, learn about:
 
-Adobe Sensei AI capabilities in DAM workflows, such as metadata management, search
-Content and Commerce AI Beta services for AEM CS
-Best practices for using AI in DAM
-Data Science in AEM using Python with AEMpy
-Building Data Science Reports using AEM data and Jupyter Notebook
-Project Firefly Intro
-
+- Adobe Sensei AI capabilities in DAM workflows, such as metadata management, search
+- Content and Commerce AI Beta services for AEM CS
+- Best practices for using AI in DAM
+- Data Science in AEM using Python with AEMpy
+- Building Data Science Reports using AEM data and Jupyter Notebook
+- Project Firefly Intro
 
 **Speakers**
 
