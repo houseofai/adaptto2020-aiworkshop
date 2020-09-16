@@ -1,4 +1,22 @@
-# DAM in AN AI First World Tech Lab Adapt To 2020 - Instruction 
+# DAM in AN AI First World Tech Lab Adapt To 2020 - Instruction
+
+- [DAM in AN AI First World Tech Lab Adapt To 2020 - Instruction](#dam-in-an-ai-first-world-tech-lab-adapt-to-2020---instruction)
+  - [Adding Credentials - Custom Worker Contd](#adding-credentials---custom-worker-contd)
+      - [Developer Tool Credentials](#developer-tool-credentials)
+    - [Local Development](#local-development)
+      - [Running the Application](#running-the-application)
+        - [**Pre-requisites**:](#pre-requisites)
+      - [Debug](#debug)
+      - [Test](#test)
+      - [Adding Worker Tests](#adding-worker-tests)
+      - [Deploy (This is not required for this lab)](#deploy-this-is-not-required-for-this-lab)
+- [Content and Commerce AI overview](#content-and-commerce-ai-overview)
+  - [Color Extraction](#color-extraction)
+    - [Getting Started](#getting-started)
+      - [**Create a Processing Profile**](#create-a-processing-profile)
+      - [**Update Metadata Schema to support output of your Custom Worker**](#update-metadata-schema-to-support-output-of-your-custom-worker)
+      - [**Associate Processing Profile with Folder**](#associate-processing-profile-with-folder)
+  - [Keyword  Extraction (To be updated this week )](#keyword-extraction-to-be-updated-this-week-)
 
 ## Adding Credentials - Custom Worker Contd
 
@@ -107,28 +125,24 @@ The color extraction service, when given an image, can compute a histogram of pi
 ### Getting Started 
 
 1. Go To project inside  [Console.adobe.io](https://console.adobe.io/projects)
-
 2. Make sure you have selected adobe-odyssee as your current organisation 
-
 3. Depending on your assignment  open AEM-pxxx-exxx91 project  ![image-20200907194723236](image-20200907194723236.png)
-
-4. Click Download on the top right corner 
+4. Click Download on the top right corner / or use the ones provided directly in this repository.
+   - [index.js](./index.js)
+   - [manifest.yml](./manifest.yml)
+   - [package.json](./package.json)
 
    ![image-20200907195151095](Lab/image-20200907195151095.png)
 
-5. Replace the content of index.js and adapt the content of package.json accordingly ( Do not replace package.json as is ,only ad the missing dependecies )
-
-6. Goto the parent directory of the project and execute npm install it will update the project with missing depedencies 
-
+5. Replace the content of \your-project\actions\worker\index.js and adapt the content of \your-project\package.json accordingly 
+   - Note, do not replace package.json as is, only ad the missing dependecies .
+6. Go to the parent / root directory of the project and execute npm install (`npm i`) it will update the project with its missing depedencies.
 7. aio app use <path to Adobe I/O Developer Console configuration file from step 5 above> // *This will setup your .env to point at the Firefly project and workspace*
-
-8. $     aio app deploy // *this will deploy the application* 
+8. `aio app deploy` // *this will deploy the application* 
 
    ![image-20200907200539570](Lab/image-20200907200539570.png)
 
    Note the URL endpoint for your new Firefly App. We’ll use this when creating a processing profile in AEM
-
-
 
 #### **Create a Processing Profile**
 
@@ -205,8 +219,6 @@ The color extraction service, when given an image, can compute a histogram of pi
 ![clip_image004](Lab/clip_image004.png) 
 
 - You should see the list of extracted     colors
-
-
 
 ## Keyword  Extraction (To be updated this week )
 

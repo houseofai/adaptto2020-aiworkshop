@@ -1,13 +1,21 @@
 # DAM In an AI First World Workshop Adapt T0 2020 Prerequisite 
 
-### Preparation
+- [DAM In an AI First World Workshop Adapt T0 2020 Prerequisite](#dam-in-an-ai-first-world-workshop-adapt-t0-2020-prerequisite)
+  - [Preparation](#preparation)
+  - [Overview](#overview)
+  - [Pre-requisites](#pre-requisites)
+  - [Getting Started](#getting-started)
+    - [Technical Requirements](#technical-requirements)
+    - [Set Up](#set-up)
+    - [Creating a Custom Worker using the Adobe CLI](#creating-a-custom-worker-using-the-adobe-cli)
+      - [Initialize Firefly App with Asset Compute Template](#initialize-firefly-app-with-asset-compute-template)
+
+## Preparation
 
 - Understand [Project Firefly](https://github.com/AdobeDocs/project-firefly)
 - Access to an IMS organization with Skyline + Firefly (Participants will be given access 1 day Prior to the lab , but before start nothing stopping you from getting prepared )
 
-
-
-### Overview
+## Overview
 
 Asset Compute is a scalable, lightweight and extensible platform service for processing assets for AEM, running completely on Adobe I/O Runtime. It is easily extendable by creating custom workers based off [Project Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html#!AdobeDocs/project-firefly/master/overview/what_is.md). These custom workers are [Project Firefly Apps](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html#!AdobeDocs/project-firefly/master/getting_started/first_app.md) and can be written to do tasks such as add custom conversion tools, or call external APIs to perform image operations.
 
@@ -15,11 +23,9 @@ Linked here is [Project Firefly's documentation guide](https://www.adobe.io/apis
 
 Asset Compute Extensibility Architecture
 
-
-
 ![image-20200908175203074](Prerequisite/image-20200908175203074.png)
 
-### Pre-requisites
+## Pre-requisites
 
 For testing your custom worker with the [developer tool](https://github.com/adobe/asset-compute-devtool), the following is also required:
 
@@ -32,9 +38,9 @@ For testing your custom worker with the [developer tool](https://github.com/adob
   - This can be a shared container used by multiple developers across different projects.
   - ***This will be provided to you during the lab***
 
-### Getting Started
+## Getting Started
 
-#### Technical Requirements
+### Technical Requirements
 
 Please install the following required tools:
 
@@ -42,7 +48,7 @@ Please install the following required tools:
 - [Docker Desktop](https://www.docker.com/get-started) (necessary for using the Asset Compute worker test framework)
 - [Visual Studio Code](https://code.visualstudio.com/download) (VS Code) is recommended. You can use any other IDE as a code editor, but advanced usage (e.g. debugger) is not supported.
 
-#### Set Up
+### Set Up
 
 1. Be granted System Admin or Developer Role access in the Experience Organization (We already took care of this for you ) [Admin Console](https://adminconsole.adobe.com/overview))
 
@@ -55,13 +61,12 @@ Please install the following required tools:
 
    - Click `"Create new project" => "Project from template"` and choose `"Firefly"`
    - This will create a new Firefly Project with two workspaces: `Production` and `Stage`. Feel free to add additional workspaces (e.g. `Development`)
+   - make sure to *not* uncheck 'include runtime'
+    - to view the auth details, you can download all information for each workspace via the 'Download All' Button in the top right.
 
 4. Inside the Firefly Project, choose a workspace and subscribe to the services needed for Asset Compute:
-
    - Click on `"Add to Project" => "API"` and add each of these services: `"Asset Compute"`, `"IO Events"`, `"IO Events Management", Content and Commerce AI(Select Product Profile when prompted)`
-
      
-
    *While adding the first API, you will be prompted to create a private key. Please save this somewhere safe on your machine. You will need this referenced in the .env file to use the developer tool.*
 
 ### Creating a Custom Worker using the Adobe CLI
@@ -75,9 +80,7 @@ Make sure to have the aio cli installed locally.
    ```
    $ aio app init <app-name>  
    ```
-
-    
-
+  
    If you have not logged in already, this command will prompt a browser asking you to sign into the [Adobe Developer Console](https://console.adobe.io/) with your Adobe ID. See [here](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#3-signing-in-from-cli) for more information on signing in from the cli.
 
    *We recomend you login, but if you are having issues follow these instructions about [how to create an app without logging in](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user).*
@@ -118,14 +121,3 @@ Make sure to have the aio cli installed locally.
    Read here about the [main components of a Firefly app](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#5-anatomy-of-a-project-firefly-application).
 
    The template worker leverages our [Asset Compute SDK](https://github.com/adobe/asset-compute-sdk#asset-compute-sdk) for the uploading, downloading, and orchestration of worker renditions so developers only need to implement the custom worker logic. Inside the `worker.js` file is where to add the custom worker code.
-
- 
-
-
-
-
-
-
-
-
-
