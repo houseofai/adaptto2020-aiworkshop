@@ -1,4 +1,22 @@
-# DAM in AN AI First World Tech Lab Adapt To 2020 - Instruction 
+# DAM in AN AI First World Tech Lab Adapt To 2020 - Instruction
+
+- [DAM in AN AI First World Tech Lab Adapt To 2020 - Instruction](#dam-in-an-ai-first-world-tech-lab-adapt-to-2020---instruction)
+  - [Adding Credentials - Custom Worker Contd](#adding-credentials---custom-worker-contd)
+      - [Developer Tool Credentials](#developer-tool-credentials)
+    - [Local Development](#local-development)
+      - [Running the Application](#running-the-application)
+        - [**Pre-requisites**:](#pre-requisites)
+      - [Debug](#debug)
+      - [Test](#test)
+      - [Adding Worker Tests](#adding-worker-tests)
+      - [Deploy (This is not required for this lab)](#deploy-this-is-not-required-for-this-lab)
+- [Content and Commerce AI overview](#content-and-commerce-ai-overview)
+  - [Color Extraction](#color-extraction)
+    - [Getting Started](#getting-started)
+      - [**Create a Processing Profile**](#create-a-processing-profile)
+      - [**Update Metadata Schema to support output of your Custom Worker**](#update-metadata-schema-to-support-output-of-your-custom-worker)
+      - [**Associate Processing Profile with Folder**](#associate-processing-profile-with-folder)
+  - [Keyword  Extraction (To be updated this week )](#keyword-extraction-to-be-updated-this-week-)
 
 ## Adding Credentials - Custom Worker Contd
 
