@@ -2,10 +2,10 @@
 
 - [DAM in AN AI First World Tech Lab Adapt To 2020 - Instruction](#dam-in-an-ai-first-world-tech-lab-adapt-to-2020---instruction)
   - [Adding Credentials - Custom Worker Contd](#adding-credentials---custom-worker-contd)
-      - [Developer Tool Credentials](#developer-tool-credentials)
+    - [Developer Tool Credentials](#developer-tool-credentials)
     - [Local Development](#local-development)
-      - [Running the Application](#running-the-application)
-        - [**Pre-requisites**:](#pre-requisites)
+      - [Pre-requisites](#pre-requisites)
+      - [Running the example Application](#running-the-example-application)
       - [Debug](#debug)
       - [Test](#test)
       - [Adding Worker Tests](#adding-worker-tests)
@@ -13,9 +13,9 @@
 - [Content and Commerce AI overview](#content-and-commerce-ai-overview)
   - [Color Extraction](#color-extraction)
     - [Getting Started](#getting-started)
-      - [**Create a Processing Profile**](#create-a-processing-profile)
-      - [**Update Metadata Schema to support output of your Custom Worker**](#update-metadata-schema-to-support-output-of-your-custom-worker)
-      - [**Associate Processing Profile with Folder**](#associate-processing-profile-with-folder)
+      - [Create a Processing Profile](#create-a-processing-profile)
+      - [Update Metadata Schema to support output of your Custom Worker](#update-metadata-schema-to-support-output-of-your-custom-worker)
+      - [Associate Processing Profile with Folder](#associate-processing-profile-with-folder)
   - [Keyword  Extraction (To be updated this week )](#keyword-extraction-to-be-updated-this-week-)
 
 ## Adding Credentials - Custom Worker Contd
@@ -24,9 +24,9 @@ Since you logged in during app creation, most of the credentials are already col
 
 *If you did not log in, read this document to [set up credentials manually](https://git.corp.adobe.com/nui/nui/blob/master/doc/developer/SettingUpCredentialsManually.md).*
 
-#### Developer Tool Credentials
+### Developer Tool Credentials
 
-**Pre-requisite**: Make sure to have access to a cloud storage container. Currently, we only support Azure Blob Storage and AWS S3.
+**Pre-requisite** Make sure that you have access to a cloud storage container. Currently, we only support Azure Blob Storage and AWS S3.
 
 *Note: This can be a shared container used by multiple developers across different projects.*
 
@@ -55,12 +55,14 @@ Add the following credentials to the `.env` file in the root of your Firefly pro
 
 ### Local Development
 
-#### Running the Application
-
-##### **Pre-requisites**:
+#### Pre-requisites
 
 - Make sure to properly configure the [development tool credentials](https://git.corp.adobe.com/nui/nui/blob/master/doc/developer/CustomWorkerDeveloperGuide.md#developer-tool-credentials) in the `.env` file.
 - Make sure to have [docker desktop](https://www.docker.com/products/docker-desktop) installed and running on your machine. You need docker running to run the worker tests
+
+#### Running the example Application
+
+This example app / worker sends a local image to blob storage. Afterwards you can select it in the dropdown and click on run. This will start the Adobe I/O worker / action, calculate a dummy rendition and send it back to your machine.
 
 To run the application, use the following command:
 
@@ -87,19 +89,19 @@ This will deploy the action to Adobe I/O Runtime and start the development tool 
 
 To test the worker, run the following command:
 
-```
+```bash
 aio app test
 ```
 
 #### Adding Worker Tests
 
-To add additional worker tests, follow the guidlines [here](https://git.corp.adobe.com/nui/nui/blob/master/doc/developer/AddWorkerTests.md)
+To add additional worker tests, follow the guidlines [here](https://git.corp.adobe.com/nui/nui/blob/master/doc/developer/AddWorkerTests.md).
 
 #### Deploy (This is not required for this lab)
 
 To deploy the worker, run the following command (This is not required for this lab):
 
-```
+```bash
 aio app deploy
 ```
 
@@ -111,16 +113,16 @@ All brands strive to deliver a perfect customer experience. You're constantly tr
 
 Content is an essential component of these experiences. To better answer marketing questions, you must understand content and your customers' interactions with it. With Content and Commerce AI, you can learn what features of the content you provide resonates with your customers. Using these insights allows you to personalize experiences and boost KPIs.
 
-You can find more details about it [here](https://docs.adobe.com/content/help/en/experience-platform/intelligent-services/content-commerce-ai/overview.html) 
+You can find more details about it [here](https://docs.adobe.com/content/help/en/experience-platform/intelligent-services/content-commerce-ai/overview.html). 
 
-This is Still in Beta , below we will try 2 features from this API  
+This is Still in Beta, below we will try 2 features from this API  
 
 - Color Extraction 
 - Keyword Extraction 
 
 ## Color Extraction 
 
-The color extraction service, when given an image, can compute a histogram of pixel colors and sort them by dominant colors into buckets. The colors in the image pixels are bucketed into 40 predominant colors which are representative of the color spectrum. A histogram of color values is then computed among those 40 colors
+The color extraction service, when given an image, can compute a histogram of pixel colors and sort them by dominant colors into buckets. The colors in the image pixels are bucketed into 40 predominant colors which are representative of the color spectrum. A histogram of color values is then computed among those 40 colors.
 
 ### Getting Started 
 
@@ -134,63 +136,58 @@ The color extraction service, when given an image, can compute a histogram of pi
 
    ![image-20200907195151095](Lab/image-20200907195151095.png)
 
-5. Replace the content of \your-project\actions\worker\index.js and adapt the content of \your-project\package.json accordingly 
-   - Note, do not replace package.json as is, only ad the missing dependecies .
+5. Replace the content of `\your-project\actions\worker\index.js` and adapt the content of `\your-project\package.json` accordingly 
+   - Note, do not replace package.json as is, only add the missing dependecies .
 6. Go to the parent / root directory of the project and execute npm install (`npm i`) it will update the project with its missing depedencies.
-7. aio app use <path to Adobe I/O Developer Console configuration file from step 5 above> // *This will setup your .env to point at the Firefly project and workspace*
-8. `aio app deploy` // *this will deploy the application* 
+7. Update the following values in your local `.env` file. Doing this, will allow us to deploy to an already set up AEM instance.
+   1. **Note**: you can alternativly execute `aio use <path/to/config.json> - which will be provided by the LAB leader`.
+   2. AIO_ims_contexts_Project__1600253157454J_client__id=
+   3. AIO_ims_contexts_Project__1600253157454J_client__secret=
+   4. AIO_ims_contexts_Project__1600253157454J_technical__account__email=
+   5. AIO_ims_contexts_Project__1600253157454J_technical__account__id=
+   6. AIO_ims_contexts_Project__1600253157454J_meta__scopes=
+   7. AIO_ims_contexts_Project__1600253157454J_ims__org__id=
+8.  `aio app deploy` // *this will deploy the application* 
+9.  If you make any changes, run `aio app undeploy` first.
 
    ![image-20200907200539570](Lab/image-20200907200539570.png)
 
    Note the URL endpoint for your new Firefly App. We’ll use this when creating a processing profile in AEM
 
-#### **Create a Processing Profile**
+#### Create a Processing Profile
 
-1. From     the AEM > Tools > Assets > Processing Profiles
-2. Click     Create
-3. Give     your Processing Profile a title, and then click on "Custom" tab
-4. Enable     "Create Metadata Rendition" toggle
-5. For     "Endpoint URL" input the URL of the worker as seen after     running aio app deploy for your Firefly application
+1. From the AEM > Tools > Assets > Processing Profiles
+2. Click Create
+3. Give your Processing Profile a title, and then click on "Custom" tab
+4. Enable "Create Metadata Rendition" toggle
+5. For "Endpoint URL" input the URL of the worker as seen after running aio app deploy for your Firefly application
 
 ​     ![clip_image001](Lab/clip_image001.png)
 
-6. Click     on Save
+6. Click on Save
 
- 
+#### Update Metadata Schema to support output of your Custom Worker
 
- 
+**Note**: this schema should be configured/customized to meet your own use case. The instructions below are to support the simple color extraction custom worker included.
 
-#### **Update Metadata Schema to support output of your Custom Worker**
-
-***\**** *Note: this schema should be configured/customized to meet your own use case. The instructions below are to support the simple color extraction custom worker included **
-
-- From the AEM > Tools > Assets >     Metadata Schemas
-
+- From the AEM > Tools > Assets > Metadata Schemas
 - Select "default"
-
 - Click on Edit
-
-- Click on + to add a new Sensei     CCAI tab
-
+- Click on + to add a new Sensei CCAI tab
 - Click on "Build Form"
-
-- Drag "Single Line Text" on the     form
-
-- - Name: Color Extraction
+- Drag "Single Line Text" on the form
+  - Name: Color Extraction
   - Map to      property: ./jcr:content/metadata/ccai:colorExtraction
 
-- Click on "Build Form" again,     Drag "Multi Value Text" on the form
-
-- - Name: Color Extraction List
+- Click on "Build Form" again, Drag "Multi Value Text" on the form
+  - Name: Color Extraction List
   - Map to      property: ./jcr:content/metadata/ccai:colorExtractionArray
 
  ![clip_image002](Lab/clip_image002.png)
 
-- Click on Save
+- Click on Save 
 
- 
-
-#### **Associate Processing Profile with Folder**
+#### Associate Processing Profile with Folder
 
 - From the AEM > Navigation > Assets 
 - Create a folder for testing this worker,     if one does not exist
@@ -200,20 +197,14 @@ The color extraction service, when given an image, can compute a histogram of pi
 
  ![clip_image003](Lab/clip_image003.png)
 
-- Click Save
-
- 
+- Click Save 
 
 **Test it!**
 
 - Upload a PNG or JPG to the folder that     you set up in Step 2.
-
 - Wait for the asset to stop processing
-
 - Hover over the asset and click on the i
-
-- - Or alternatively select the asset and      click on Properties
-
+  - Or alternatively select the asset and      click on Properties
 - Switch to the Sensei CCAI tab
 
 ![clip_image004](Lab/clip_image004.png) 
@@ -221,4 +212,3 @@ The color extraction service, when given an image, can compute a histogram of pi
 - You should see the list of extracted     colors
 
 ## Keyword  Extraction (To be updated this week )
-
