@@ -148,6 +148,7 @@ The color extraction service, when given an image, can compute a histogram of pi
    6. AIO_ims_contexts_Project__1600253157454J_meta__scopes=
    7. AIO_ims_contexts_Project__1600253157454J_ims__org__id=
 8.  `aio app deploy` // *this will deploy the application* 
+9.  If you make any changes, run `aio app undeploy` first.
 
    ![image-20200907200539570](Lab/image-20200907200539570.png)
 
