@@ -4,8 +4,8 @@
   - [Adding Credentials - Custom Worker Contd](#adding-credentials---custom-worker-contd)
       - [Developer Tool Credentials](#developer-tool-credentials)
     - [Local Development](#local-development)
+      - [Pre-requisites](#pre-requisites)
       - [Running the Application](#running-the-application)
-        - [**Pre-requisites**:](#pre-requisites)
       - [Debug](#debug)
       - [Test](#test)
       - [Adding Worker Tests](#adding-worker-tests)
@@ -13,9 +13,9 @@
 - [Content and Commerce AI overview](#content-and-commerce-ai-overview)
   - [Color Extraction](#color-extraction)
     - [Getting Started](#getting-started)
-      - [**Create a Processing Profile**](#create-a-processing-profile)
-      - [**Update Metadata Schema to support output of your Custom Worker**](#update-metadata-schema-to-support-output-of-your-custom-worker)
-      - [**Associate Processing Profile with Folder**](#associate-processing-profile-with-folder)
+      - [Create a Processing Profile](#create-a-processing-profile)
+      - [Update Metadata Schema to support output of your Custom Worker](#update-metadata-schema-to-support-output-of-your-custom-worker)
+      - [Associate Processing Profile with Folder](#associate-processing-profile-with-folder)
   - [Keyword  Extraction (To be updated this week )](#keyword-extraction-to-be-updated-this-week-)
 
 ## Adding Credentials - Custom Worker Contd
@@ -26,7 +26,7 @@ Since you logged in during app creation, most of the credentials are already col
 
 #### Developer Tool Credentials
 
-**Pre-requisite**: Make sure to have access to a cloud storage container. Currently, we only support Azure Blob Storage and AWS S3.
+**Pre-requisite** Make sure to have access to a cloud storage container. Currently, we only support Azure Blob Storage and AWS S3.
 
 *Note: This can be a shared container used by multiple developers across different projects.*
 
@@ -55,12 +55,12 @@ Add the following credentials to the `.env` file in the root of your Firefly pro
 
 ### Local Development
 
-#### Running the Application
-
-##### **Pre-requisites**:
+#### Pre-requisites
 
 - Make sure to properly configure the [development tool credentials](https://git.corp.adobe.com/nui/nui/blob/master/doc/developer/CustomWorkerDeveloperGuide.md#developer-tool-credentials) in the `.env` file.
 - Make sure to have [docker desktop](https://www.docker.com/products/docker-desktop) installed and running on your machine. You need docker running to run the worker tests
+
+#### Running the Application
 
 To run the application, use the following command:
 
@@ -134,33 +134,35 @@ The color extraction service, when given an image, can compute a histogram of pi
 
    ![image-20200907195151095](Lab/image-20200907195151095.png)
 
-5. Replace the content of \your-project\actions\worker\index.js and adapt the content of \your-project\package.json accordingly 
-   - Note, do not replace package.json as is, only ad the missing dependecies .
+5. Replace the content of `\your-project\actions\worker\index.js` and adapt the content of `\your-project\package.json` accordingly 
+   - Note, do not replace package.json as is, only add the missing dependecies .
 6. Go to the parent / root directory of the project and execute npm install (`npm i`) it will update the project with its missing depedencies.
-7. aio app use <path to Adobe I/O Developer Console configuration file from step 5 above> // *This will setup your .env to point at the Firefly project and workspace*
-8. `aio app deploy` // *this will deploy the application* 
+7. Update the following values in your local `.env` file. Do this, will allow us to deploy to an already set up AEM instance.
+   1. AIO_ims_contexts_Project__1600253157454J_client__id=
+   2. AIO_ims_contexts_Project__1600253157454J_client__secret=
+   3. AIO_ims_contexts_Project__1600253157454J_technical__account__email=
+   4. AIO_ims_contexts_Project__1600253157454J_technical__account__id=
+   5. AIO_ims_contexts_Project__1600253157454J_meta__scopes=
+   6. AIO_ims_contexts_Project__1600253157454J_ims__org__id=
+8.  `aio app deploy` // *this will deploy the application* 
 
    ![image-20200907200539570](Lab/image-20200907200539570.png)
 
    Note the URL endpoint for your new Firefly App. We’ll use this when creating a processing profile in AEM
 
-#### **Create a Processing Profile**
+#### Create a Processing Profile
 
-1. From     the AEM > Tools > Assets > Processing Profiles
-2. Click     Create
-3. Give     your Processing Profile a title, and then click on "Custom" tab
-4. Enable     "Create Metadata Rendition" toggle
-5. For     "Endpoint URL" input the URL of the worker as seen after     running aio app deploy for your Firefly application
+1. From the AEM > Tools > Assets > Processing Profiles
+2. Click Create
+3. Give your Processing Profile a title, and then click on "Custom" tab
+4. Enable "Create Metadata Rendition" toggle
+5. For "Endpoint URL" input the URL of the worker as seen after     running aio app deploy for your Firefly application
 
 ​     ![clip_image001](Lab/clip_image001.png)
 
-6. Click     on Save
+6. Click on Save
 
- 
-
- 
-
-#### **Update Metadata Schema to support output of your Custom Worker**
+#### Update Metadata Schema to support output of your Custom Worker
 
 ***\**** *Note: this schema should be configured/customized to meet your own use case. The instructions below are to support the simple color extraction custom worker included **
 
@@ -190,7 +192,7 @@ The color extraction service, when given an image, can compute a histogram of pi
 
  
 
-#### **Associate Processing Profile with Folder**
+#### Associate Processing Profile with Folder
 
 - From the AEM > Navigation > Assets 
 - Create a folder for testing this worker,     if one does not exist
@@ -200,9 +202,7 @@ The color extraction service, when given an image, can compute a histogram of pi
 
  ![clip_image003](Lab/clip_image003.png)
 
-- Click Save
-
- 
+- Click Save 
 
 **Test it!**
 
@@ -221,4 +221,3 @@ The color extraction service, when given an image, can compute a histogram of pi
 - You should see the list of extracted     colors
 
 ## Keyword  Extraction (To be updated this week )
-
