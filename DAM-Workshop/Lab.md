@@ -87,19 +87,19 @@ This will deploy the action to Adobe I/O Runtime and start the development tool 
 
 To test the worker, run the following command:
 
-```
+```bash
 aio app test
 ```
 
 #### Adding Worker Tests
 
-To add additional worker tests, follow the guidlines [here](https://git.corp.adobe.com/nui/nui/blob/master/doc/developer/AddWorkerTests.md)
+To add additional worker tests, follow the guidlines [here](https://git.corp.adobe.com/nui/nui/blob/master/doc/developer/AddWorkerTests.md).
 
 #### Deploy (This is not required for this lab)
 
 To deploy the worker, run the following command (This is not required for this lab):
 
-```
+```bash
 aio app deploy
 ```
 
@@ -111,16 +111,16 @@ All brands strive to deliver a perfect customer experience. You're constantly tr
 
 Content is an essential component of these experiences. To better answer marketing questions, you must understand content and your customers' interactions with it. With Content and Commerce AI, you can learn what features of the content you provide resonates with your customers. Using these insights allows you to personalize experiences and boost KPIs.
 
-You can find more details about it [here](https://docs.adobe.com/content/help/en/experience-platform/intelligent-services/content-commerce-ai/overview.html) 
+You can find more details about it [here](https://docs.adobe.com/content/help/en/experience-platform/intelligent-services/content-commerce-ai/overview.html). 
 
-This is Still in Beta , below we will try 2 features from this API  
+This is Still in Beta, below we will try 2 features from this API  
 
 - Color Extraction 
 - Keyword Extraction 
 
 ## Color Extraction 
 
-The color extraction service, when given an image, can compute a histogram of pixel colors and sort them by dominant colors into buckets. The colors in the image pixels are bucketed into 40 predominant colors which are representative of the color spectrum. A histogram of color values is then computed among those 40 colors
+The color extraction service, when given an image, can compute a histogram of pixel colors and sort them by dominant colors into buckets. The colors in the image pixels are bucketed into 40 predominant colors which are representative of the color spectrum. A histogram of color values is then computed among those 40 colors.
 
 ### Getting Started 
 
@@ -137,13 +137,14 @@ The color extraction service, when given an image, can compute a histogram of pi
 5. Replace the content of `\your-project\actions\worker\index.js` and adapt the content of `\your-project\package.json` accordingly 
    - Note, do not replace package.json as is, only add the missing dependecies .
 6. Go to the parent / root directory of the project and execute npm install (`npm i`) it will update the project with its missing depedencies.
-7. Update the following values in your local `.env` file. Do this, will allow us to deploy to an already set up AEM instance.
-   1. AIO_ims_contexts_Project__1600253157454J_client__id=
-   2. AIO_ims_contexts_Project__1600253157454J_client__secret=
-   3. AIO_ims_contexts_Project__1600253157454J_technical__account__email=
-   4. AIO_ims_contexts_Project__1600253157454J_technical__account__id=
-   5. AIO_ims_contexts_Project__1600253157454J_meta__scopes=
-   6. AIO_ims_contexts_Project__1600253157454J_ims__org__id=
+7. Update the following values in your local `.env` file. Doing this, will allow us to deploy to an already set up AEM instance.
+   1. **Note**: you can alternativly execute `aio use <path/to/config.json> - which will be provided by the LAB leader`.
+   2. AIO_ims_contexts_Project__1600253157454J_client__id=
+   3. AIO_ims_contexts_Project__1600253157454J_client__secret=
+   4. AIO_ims_contexts_Project__1600253157454J_technical__account__email=
+   5. AIO_ims_contexts_Project__1600253157454J_technical__account__id=
+   6. AIO_ims_contexts_Project__1600253157454J_meta__scopes=
+   7. AIO_ims_contexts_Project__1600253157454J_ims__org__id=
 8.  `aio app deploy` // *this will deploy the application* 
 
    ![image-20200907200539570](Lab/image-20200907200539570.png)
@@ -156,7 +157,7 @@ The color extraction service, when given an image, can compute a histogram of pi
 2. Click Create
 3. Give your Processing Profile a title, and then click on "Custom" tab
 4. Enable "Create Metadata Rendition" toggle
-5. For "Endpoint URL" input the URL of the worker as seen after     running aio app deploy for your Firefly application
+5. For "Endpoint URL" input the URL of the worker as seen after running aio app deploy for your Firefly application
 
 ​     ![clip_image001](Lab/clip_image001.png)
 
@@ -164,26 +165,19 @@ The color extraction service, when given an image, can compute a histogram of pi
 
 #### Update Metadata Schema to support output of your Custom Worker
 
-***\**** *Note: this schema should be configured/customized to meet your own use case. The instructions below are to support the simple color extraction custom worker included **
+**Note**: this schema should be configured/customized to meet your own use case. The instructions below are to support the simple color extraction custom worker included.
 
-- From the AEM > Tools > Assets >     Metadata Schemas
-
+- From the AEM > Tools > Assets > Metadata Schemas
 - Select "default"
-
 - Click on Edit
-
-- Click on + to add a new Sensei     CCAI tab
-
+- Click on + to add a new Sensei CCAI tab
 - Click on "Build Form"
-
-- Drag "Single Line Text" on the     form
-
-- - Name: Color Extraction
+- Drag "Single Line Text" on the form
+  - Name: Color Extraction
   - Map to      property: ./jcr:content/metadata/ccai:colorExtraction
 
-- Click on "Build Form" again,     Drag "Multi Value Text" on the form
-
-- - Name: Color Extraction List
+- Click on "Build Form" again, Drag "Multi Value Text" on the form
+  - Name: Color Extraction List
   - Map to      property: ./jcr:content/metadata/ccai:colorExtractionArray
 
  ![clip_image002](Lab/clip_image002.png)
@@ -207,13 +201,9 @@ The color extraction service, when given an image, can compute a histogram of pi
 **Test it!**
 
 - Upload a PNG or JPG to the folder that     you set up in Step 2.
-
 - Wait for the asset to stop processing
-
 - Hover over the asset and click on the i
-
-- - Or alternatively select the asset and      click on Properties
-
+  - Or alternatively select the asset and      click on Properties
 - Switch to the Sensei CCAI tab
 
 ![clip_image004](Lab/clip_image004.png) 
