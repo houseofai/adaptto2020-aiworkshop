@@ -2,10 +2,10 @@
 
 - [DAM in AN AI First World Tech Lab Adapt To 2020 - Instruction](#dam-in-an-ai-first-world-tech-lab-adapt-to-2020---instruction)
   - [Adding Credentials - Custom Worker Contd](#adding-credentials---custom-worker-contd)
-      - [Developer Tool Credentials](#developer-tool-credentials)
+    - [Developer Tool Credentials](#developer-tool-credentials)
     - [Local Development](#local-development)
       - [Pre-requisites](#pre-requisites)
-      - [Running the Application](#running-the-application)
+      - [Running the example Application](#running-the-example-application)
       - [Debug](#debug)
       - [Test](#test)
       - [Adding Worker Tests](#adding-worker-tests)
@@ -24,9 +24,9 @@ Since you logged in during app creation, most of the credentials are already col
 
 *If you did not log in, read this document to [set up credentials manually](https://git.corp.adobe.com/nui/nui/blob/master/doc/developer/SettingUpCredentialsManually.md).*
 
-#### Developer Tool Credentials
+### Developer Tool Credentials
 
-**Pre-requisite** Make sure to have access to a cloud storage container. Currently, we only support Azure Blob Storage and AWS S3.
+**Pre-requisite** Make sure that you have access to a cloud storage container. Currently, we only support Azure Blob Storage and AWS S3.
 
 *Note: This can be a shared container used by multiple developers across different projects.*
 
@@ -60,7 +60,9 @@ Add the following credentials to the `.env` file in the root of your Firefly pro
 - Make sure to properly configure the [development tool credentials](https://git.corp.adobe.com/nui/nui/blob/master/doc/developer/CustomWorkerDeveloperGuide.md#developer-tool-credentials) in the `.env` file.
 - Make sure to have [docker desktop](https://www.docker.com/products/docker-desktop) installed and running on your machine. You need docker running to run the worker tests
 
-#### Running the Application
+#### Running the example Application
+
+This example app / worker sends a local image to blob storage. Afterwards you can select it in the dropdown and click on run. This will start the Adobe I/O worker / action, calculate a dummy rendition and send it back to your machine.
 
 To run the application, use the following command:
 
@@ -182,9 +184,7 @@ The color extraction service, when given an image, can compute a histogram of pi
 
  ![clip_image002](Lab/clip_image002.png)
 
-- Click on Save
-
- 
+- Click on Save 
 
 #### Associate Processing Profile with Folder
 
