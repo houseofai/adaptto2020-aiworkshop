@@ -119,7 +119,7 @@ The color extraction service, when given an image, can compute a histogram of pi
 
    ![image-20200907195151095](Lab/image-20200907195151095.png)
 
-5. Replace the content of index.js and adapt the content of package.json accordingly ( Do not replace package.json as is ,only ad the missing dependecies )
+5. Replace the content of <your-project>\actions\worker\index.js and adapt the content of <your-project>\package.json accordingly ( Do not replace package.json as is ,only ad the missing dependecies )
 
 6. Goto the parent directory of the project and execute npm install it will update the project with missing depedencies 
 
