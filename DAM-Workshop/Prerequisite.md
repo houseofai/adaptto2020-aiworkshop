@@ -55,6 +55,9 @@ Please install the following required tools:
 
    - Click `"Create new project" => "Project from template"` and choose `"Firefly"`
    - This will create a new Firefly Project with two workspaces: `Production` and `Stage`. Feel free to add additional workspaces (e.g. `Development`)
+   - make sure to *not* uncheck 'include runtime'
+    - to view the auth details, you can download all information for each workspace via the 'Download All' Button in the top right.
+
 
 4. Inside the Firefly Project, choose a workspace and subscribe to the services needed for Asset Compute:
 
