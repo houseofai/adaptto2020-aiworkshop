@@ -124,6 +124,10 @@ This is Still in Beta, below we will try 2 features from this API
 
 The color extraction service, when given an image, can compute a histogram of pixel colors and sort them by dominant colors into buckets. The colors in the image pixels are bucketed into 40 predominant colors which are representative of the color spectrum. A histogram of color values is then computed among those 40 colors.
 
+Please take a look at the [Official Color Extraction Documentation](https://docs.adobe.com/content/help/en/experience-platform/intelligent-services/content-commerce-ai/api/color-extraction.html) to understand the used code fragments from the workers 'index.js'.
+
+> ⚠ *analyzer_id* determines which Sensei Content Framework is used. Please check that you have the proper analyzer_id before making your request. For color extraction service, the analyzer_id ID is: *Feature:image-color-histogram:Service-6fe52999293e483b8e4ae9a95f1b81a7*
+
 ### Getting Started 
 
 1. Go To project inside  [Console.adobe.io](https://console.adobe.io/projects)
