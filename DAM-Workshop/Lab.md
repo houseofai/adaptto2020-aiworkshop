@@ -124,6 +124,8 @@ This is Still in Beta, below we will try 2 features from this API
 
 The color extraction service, when given an image, can compute a histogram of pixel colors and sort them by dominant colors into buckets. The colors in the image pixels are bucketed into 40 predominant colors which are representative of the color spectrum. A histogram of color values is then computed among those 40 colors.
 
+Please take a look at the [Official Color Extraction Documentation](https://docs.adobe.com/content/help/en/experience-platform/intelligent-services/content-commerce-ai/api/color-extraction.html) to understand the used code fragments from the workers 'index.js'.
+
 ### Getting Started 
 
 1. Go To project inside  [Console.adobe.io](https://console.adobe.io/projects)
