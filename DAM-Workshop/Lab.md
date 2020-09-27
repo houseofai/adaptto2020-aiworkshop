@@ -309,14 +309,23 @@ The lists have the same order and are sorted from high to low score percentage.
 
   ### End to end test
 
-  - Upload a pdf file 
-  - Wait for the asset to stop processing
-  - Click on the asset
-  - Click on *Properties*
-  - Switch to the CCAI-Keyword tab
-  - ![image-20200927221341931](Lab/image-20200927221341931.png)
-  - In case you don't see the metadata reprocess it from here 
-  - ![image-20200927221601164](Lab/image-20200927221601164.png)
+  Upload a pdf file 
+
+  Wait for the asset to stop processing
+
+  Click on the asset
+
+  Click on *Properties*
+
+  Click on save once you are done
+
+  Switch to the CCAI-Keyword tab
+
+  ![image-20200927221341931](Lab/image-20200927221341931.png)
+
+  In case you don't see the metadata reprocess it from here 
+
+  ![image-20200927221601164](Lab/image-20200927221601164.png)
 
    
 
