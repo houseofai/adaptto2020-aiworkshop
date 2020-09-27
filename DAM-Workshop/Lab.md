@@ -219,8 +219,10 @@ Please take a look at the [Official Color Extraction Documentation](https://docs
   - Or alternatively select the asset and      click on Properties
 - Switch to the Sensei CCAI Color  tab
 
-![clip_image004](Lab/clip_image004.png) 
+  
 
 - You should see the list of extracted     colors
+
+  <img src="Lab/image-20200927210356025.png" alt="image-20200927210356025" style="zoom:150%;" />
 
 ## Keyword  Extraction (To be updated this week )
