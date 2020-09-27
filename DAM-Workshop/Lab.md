@@ -230,7 +230,7 @@ Please take a look at the [Official Color Extraction Documentation](https://docs
 
 ## Keyword  Extraction  
 
-Example of a custom Asset Compute Metadata worker leveraging the [Content and Commerce AI](https://docs.adobe.com/content/help/en/experience-platform/intelligent-services/content-commerce-ai/overview.html) Color extraction API.
+Example of a custom Asset Compute Metadata worker leveraging the [Content and Commerce AI](https://docs.adobe.com/content/help/en/experience-platform/intelligent-services/content-commerce-ai/overview.html) Keyword  extraction API from PDF .
 
 The worker is based on [Project Firefly](https://github.com/AdobeDocs/project-firefly) and the [aio](https://github.com/adobe/aio-cli) developer tool.Copy the content of worker-ccai-keywordextract.js into yours index.js.
 
@@ -252,20 +252,74 @@ The lists have the same order and are sorted from high to low score percentage.
 
 ## Deploy 
 
-- Download the sources of this worker file from 
+- Download the sources of this worker files from [here](https://github.com/houseofai/adaptto2020-aiworkshop/tree/master/text-worker-master) 
 
-- Go to the `worker-ccai-colorextract` directory
+- Go to the `tex-worker-master` directory
 
 - Run `npm install`
 
-- Run
-
-   
+- Run 
 
   ```
-  aio app use <Path to Adobe I/O Developer Console configuration file>
+  aio app use <Path to Adobe I/O Developer Console configuration file> (you can get it from env_file)
   ```
 
   - This will setup your `.env` to point at the Firefly project and workspace
 
 - Run `aio app deploy` to deploy the application
+
+### Review logs
+
+- Use `aio app logs` to review the logs of the most recent invocation
+
+## Integrating with AEM Cloud Service
+
+### Create a Processing Profile
+
+- From the AEM homepage, navigate to Tools -> Assets -> Processing profiles -> Create
+- Select the Custom tab
+- Enable *Create Metadata Rendition*
+- For *Endpoint URL*, input the URL of the worker as seen after running `aio app deploy`
+- Click on Save
+
+### Associate Processing Profile with Folder
+
+- Select the created Processing Profile
+- Click on *Apply Profile to Folder(s)*
+- Select a folder
+- Click on *Apply*
+
+### Update Metadata Schema
+
+- From the AEM homepage, navigate to Tools -> Assets -> Metadata Schemas
+
+- Select an existing schema like *default* and click on *Edit* or click *Create*
+
+- Click on `+` to add a new *Content and Commerce AI* tab like ccai-keyword tab
+
+- Create new metadata schema as mentioned inside MetaData table 
+
+- For refernce you can follow this existing schema 
+
+- ![image-20200927220835057](Lab/image-20200927220835057.png)
+
+- ![image-20200927220909537](Lab/image-20200927220909537.png)
+
+- Click on save once you are done .
+
+  ### End to end test
+
+  - Upload a pdf file 
+  - Wait for the asset to stop processing
+  - Click on the asset
+  - Click on *Properties*
+  - Switch to the CCAI-Keyword tab
+  - ![image-20200927221341931](Lab/image-20200927221341931.png)
+  - In case you don't see the metadata reprocess it from here 
+  - ![image-20200927221601164](Lab/image-20200927221601164.png)
+
+   
+
+   
+
+### 
