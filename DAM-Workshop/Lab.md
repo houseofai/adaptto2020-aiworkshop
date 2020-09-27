@@ -136,6 +136,8 @@ Please take a look at the [Official Color Extraction Documentation](https://docs
 
 3. Depending on your assignment  open AEM-pxxx-exxx91 project   (There are 6 lab env named adaptto2020-1 to  adaptto2020-6 you can be assigned to any one of them for this lab )  
 
+   ![image-20200927210820016](Lab/image-20200927210820016.png)
+
 4. Click Download on the top right corner / or use the ones provided directly in this repository.
    - [index.js](./index.js)
    - [manifest.yml](./manifest.yml)
@@ -150,7 +152,7 @@ Please take a look at the [Official Color Extraction Documentation](https://docs
 6. Go to the parent / root directory of the project and execute npm install (`npm i`) it will update the project with its missing depedencies.
 
 7. Update the following values in your local `.env` file. Doing this, will allow us to deploy to an already set up AEM instance.
-   1. **Note**: you can alternativly execute `aio use <path/to/config.json> - which will be provided by the LAB leader.They are inside a folder named **env_file** (For Sanity of this lab use only the env you are assigned with )
+   1. **Note**: you can alternativly execute `aio use <path/to/config.json> - which will be provided by the LAB leader.They are inside a folder named [**env_file**](https://github.com/houseofai/adaptto2020-aiworkshop/tree/master/DAM-Workshop/env_file) (For Sanity of this lab use only the env you are assigned with )
    2. AIO_ims_contexts_Project__1600253157454J_client__id=
    3. AIO_ims_contexts_Project__1600253157454J_client__secret=
    4. AIO_ims_contexts_Project__1600253157454J_technical__account__email=
@@ -190,7 +192,8 @@ Please take a look at the [Official Color Extraction Documentation](https://docs
 - Drag "Multi Value Text" on the form
   - Name: Color Names
   - Map to      property: ./jcr:content/metadata/ccai:colorNames
-
+- ![image-20200927211324122](Lab/image-20200927211324122.png)
+  
 - Click on "Build Form" again, Drag "Multi Value Text" on the form
   - Name: Color RGB
   - Map to      property: ./jcr:content/metadata/ccai:colorRGB
