@@ -1,0 +1,68 @@
+{
+    "project": {
+        "id": "4566206088344567975",
+        "name": "AEMp22856e60351",
+        "title": "AEM-p22856-e60351",
+        "description": "DO NOT DELETE. Automatically created by Cloud Manager for AEM environment adaptto2020-4-dev in program adaptto2020-4",
+        "org": {
+            "id": "30489",
+            "name": "adobe-odyssee",
+            "ims_org_id": "B40B3319554BCF177F000101@AdobeOrg"
+        },
+        "workspace": {
+            "id": "4566206088344568638",
+            "name": "Production",
+            "title": "AEM-p22856-e60351",
+            "description": "DO NOT DELETE. Automatically created by Cloud Manager for AEM environment adaptto2020-4-dev in program adaptto2020-4",
+            "action_url": "https://30489-aemp22856e60351.adobeioruntime.net",
+            "app_url": "https://30489-aemp22856e60351.adobeio-static.net",
+            "details": {
+                "credentials": [
+                    {
+                        "id": "114236",
+                        "name": "AEM-p22856-e60351",
+                        "integration_type": "service",
+                        "jwt": {
+                            "client_id": "55d90afae1d34292abbf2e686470b390",
+                            "client_secret": "22d7b245-569a-45c2-9795-1b527629336c",
+                            "technical_account_email": "08969344-ffb1-4f23-b948-de600b431b31@techacct.adobe.com",
+                            "technical_account_id": "D37D09385F70D2630A495CFD@techacct.adobe.com",
+                            "meta_scopes": [
+                                "ent_reactor_sdk",
+                                "asset_compute_meta",
+                                "ent_adobeio_sdk",
+                                "ent_smartcontent_sdk",
+                                "event_receiver_api"
+                            ]
+                        }
+                    }
+                ],
+                "services": [
+                    {
+                        "code": "AdobeIOManagementAPISDK",
+                        "name": "I/O Management API"
+                    },
+                    {
+                        "code": "AssetComputeSDK",
+                        "name": "Asset Compute"
+                    },
+                    {
+                        "code": "CloudIntegrationSDK",
+                        "name": "I/O Events"
+                    },
+                    {
+                        "code": "McDtmSDK",
+                        "name": "Experience Platform Launch API"
+                    },
+                    {
+                        "code": "MCSmartContentServicesSDK",
+                        "name": "Smart Content"
+                    }
+                ],
+                "runtime": {
+                    "namespaces": []
+                }
+            }
+        }
+    }
+}

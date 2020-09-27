@@ -131,8 +131,13 @@ Please take a look at the [Official Color Extraction Documentation](https://docs
 ### Getting Started 
 
 1. Go To project inside  [Console.adobe.io](https://console.adobe.io/projects)
+
 2. Make sure you have selected adobe-odyssee as your current organisation 
-3. Depending on your assignment  open AEM-pxxx-exxx91 project  ![image-20200907194723236](image-20200907194723236.png)
+
+3. Depending on your assignment  open AEM-pxxx-exxx91 project   (There are 6 lab env named adaptto2020-1 to  adaptto2020-6 you can be assigned to any one of them for this lab )
+
+   ![Screenshot 2020-09-27 at 20.29.33](Lab/Screenshot 2020-09-27 at 20.29.33-1231465.png)
+
 4. Click Download on the top right corner / or use the ones provided directly in this repository.
    - [index.js](./index.js)
    - [manifest.yml](./manifest.yml)
@@ -141,18 +146,23 @@ Please take a look at the [Official Color Extraction Documentation](https://docs
    ![image-20200907195151095](Lab/image-20200907195151095.png)
 
 5. Replace the content of `\your-project\actions\worker\index.js` and adapt the content of `\your-project\package.json` accordingly 
+
    - Note, do not replace package.json as is, only add the missing dependecies .
+
 6. Go to the parent / root directory of the project and execute npm install (`npm i`) it will update the project with its missing depedencies.
+
 7. Update the following values in your local `.env` file. Doing this, will allow us to deploy to an already set up AEM instance.
-   1. **Note**: you can alternativly execute `aio use <path/to/config.json> - which will be provided by the LAB leader`.
+   1. **Note**: you can alternativly execute `aio use <path/to/config.json> - which will be provided by the LAB leader.They are inside a folder named **env_file** (For Sanity of this lab use only the env you are assigned with )
    2. AIO_ims_contexts_Project__1600253157454J_client__id=
    3. AIO_ims_contexts_Project__1600253157454J_client__secret=
    4. AIO_ims_contexts_Project__1600253157454J_technical__account__email=
    5. AIO_ims_contexts_Project__1600253157454J_technical__account__id=
    6. AIO_ims_contexts_Project__1600253157454J_meta__scopes=
    7. AIO_ims_contexts_Project__1600253157454J_ims__org__id=
-8.  `aio app deploy` // *this will deploy the application* 
-9.  If you make any changes, run `aio app undeploy` first.
+
+8. `aio app deploy` // *this will deploy the application* 
+
+9. If you make any changes, run `aio app undeploy` first.
 
    ![image-20200907200539570](Lab/image-20200907200539570.png)
 
@@ -180,14 +190,14 @@ Please take a look at the [Official Color Extraction Documentation](https://docs
 - Click on + to add a new Sensei CCAI tab
 - Click on "Build Form"
 - Drag "Single Line Text" on the form
-  - Name: Color Extraction
-  - Map to      property: ./jcr:content/metadata/ccai:colorExtraction
+  - Name: Color Names
+  - Map to      property: ./jcr:content/metadata/ccai:colorNames
 
 - Click on "Build Form" again, Drag "Multi Value Text" on the form
-  - Name: Color Extraction List
-  - Map to      property: ./jcr:content/metadata/ccai:colorExtractionArray
+  - Name: Color RGB
+  - Map to      property: ./jcr:content/metadata/ccai:colorRGB
 
- ![clip_image002](Lab/clip_image002.png)
+  ![Screenshot 2020-09-27 at 20.24.30](Lab/Screenshot 2020-09-27 at 20.24.30.png)
 
 - Click on Save 
 
@@ -209,7 +219,7 @@ Please take a look at the [Official Color Extraction Documentation](https://docs
 - Wait for the asset to stop processing
 - Hover over the asset and click on the i
   - Or alternatively select the asset and      click on Properties
-- Switch to the Sensei CCAI tab
+- Switch to the Sensei CCAI Color  tab
 
 ![clip_image004](Lab/clip_image004.png) 
 
