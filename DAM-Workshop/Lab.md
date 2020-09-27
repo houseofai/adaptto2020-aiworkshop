@@ -134,9 +134,7 @@ Please take a look at the [Official Color Extraction Documentation](https://docs
 
 2. Make sure you have selected adobe-odyssee as your current organisation 
 
-3. Depending on your assignment  open AEM-pxxx-exxx91 project   (There are 6 lab env named adaptto2020-1 to  adaptto2020-6 you can be assigned to any one of them for this lab )
-
-    ![Screenshot 2020-09-27 at 20.29.33](Lab/Screenshot 2020-09-27 at 20.29.33-1232719.png)
+3. Depending on your assignment  open AEM-pxxx-exxx91 project   (There are 6 lab env named adaptto2020-1 to  adaptto2020-6 you can be assigned to any one of them for this lab )  
 
 4. Click Download on the top right corner / or use the ones provided directly in this repository.
    - [index.js](./index.js)
@@ -197,7 +195,7 @@ Please take a look at the [Official Color Extraction Documentation](https://docs
   - Name: Color RGB
   - Map to      property: ./jcr:content/metadata/ccai:colorRGB
 
-  ![Screenshot 2020-09-27 at 20.24.30](Lab/Screenshot 2020-09-27 at 20.24.30-1232745.png)
+   
 
 - Click on Save 
 
