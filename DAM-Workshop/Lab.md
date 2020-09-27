@@ -292,43 +292,34 @@ The lists have the same order and are sorted from high to low score percentage.
 ### Update Metadata Schema
 
 - From the AEM homepage, navigate to Tools -> Assets -> Metadata Schemas
-
 - Select an existing schema like *default* and click on *Edit* or click *Create*
-
 - Click on `+` to add a new *Content and Commerce AI* tab like ccai-keyword tab
-
 - Create new metadata schema as mentioned inside MetaData table 
-
 - For refernce you can follow this existing schema 
 
-- ![image-20200927220835057](Lab/image-20200927220835057.png)
+![image-20200927220835057](Lab/image-20200927220835057.png)
 
-- ![image-20200927220909537](Lab/image-20200927220909537.png)
+![image-20200927220909537](Lab/image-20200927220909537.png)
 
-- Click on save once you are done .
+Click on save once you are done .
 
-  ### End to end test
+### End to end test
 
-  Upload a pdf file 
+-  Upload a pdf file 
+-  Wait for the asset to stop processing
+-  Click on the asset
+-  Click on Properties
+-  Click on save once you are done
+-  Switch to the CCAI-Keyword tab
 
-  Wait for the asset to stop processing
+![image-20200927221341931](Lab/image-20200927221341931.png)
 
-  Click on the asset
+-  In case you don't see the metadata reprocess it 
 
-  Click on *Properties*
+![image-20200927221601164](Lab/image-20200927221601164.png)
 
-  Click on save once you are done
+ 
 
-  Switch to the CCAI-Keyword tab
-
-  ![image-20200927221341931](Lab/image-20200927221341931.png)
-
-  In case you don't see the metadata reprocess it from here 
-
-  ![image-20200927221601164](Lab/image-20200927221601164.png)
-
-   
-
-   
+ 
 
 ### 
