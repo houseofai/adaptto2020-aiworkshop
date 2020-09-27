@@ -228,4 +228,44 @@ Please take a look at the [Official Color Extraction Documentation](https://docs
 
   <img src="Lab/image-20200927210356025.png" alt="image-20200927210356025" style="zoom:150%;" />
 
-## Keyword  Extraction (To be updated this week )
+## Keyword  Extraction  
+
+Example of a custom Asset Compute Metadata worker leveraging the [Content and Commerce AI](https://docs.adobe.com/content/help/en/experience-platform/intelligent-services/content-commerce-ai/overview.html) Color extraction API.
+
+The worker is based on [Project Firefly](https://github.com/AdobeDocs/project-firefly) and the [aio](https://github.com/adobe/aio-cli) developer tool.Copy the content of worker-ccai-keywordextract.js into yours index.js.
+
+## Metadata
+
+The worker returns the following metadata from the recognized list of named entities from the [keyword extraction API](https://docs.adobe.com/content/help/en/experience-platform/intelligent-services/content-commerce-ai/api/keyword-extraction.html). 
+
+| Name                      | Metadata Type           | Description                                                  |
+| ------------------------- | ----------------------- | ------------------------------------------------------------ |
+| `ccai:entityKeyword`      | Multi Value Text        | List of keywords                                             |
+| `ccai:entityOrganization` | Multi Value Text        | List of companies, agencies, institutions                    |
+| `ccai:entityProduct`      | Multi Value Text        | List of objects, vehicles, foods, etc. (Not services)        |
+| `ccai:entityPerson`       | Multi Value Text        | List of people, including fictional.                         |
+| `ccai:entityLocation`     | Multi Value Text        | List of countries, cities, states, mountain ranges, and bodies of water. |
+| `ccai:entityName`         | Multi Value Text        | List of entity names in order of highest score to lowest score |
+| `ccai:entity`             | Sequence of XMP structs | List of entity features, with fields `ccai:name`, `ccai:type`, and `ccai:score`. Intended for advanced AEM customizations. |
+
+The lists have the same order and are sorted from high to low score percentage.
+
+## Deploy 
+
+- Download the sources of this worker file from 
+
+- Go to the `worker-ccai-colorextract` directory
+
+- Run `npm install`
+
+- Run
+
+   
+
+  ```
+  aio app use <Path to Adobe I/O Developer Console configuration file>
+  ```
+
+  - This will setup your `.env` to point at the Firefly project and workspace
+
+- Run `aio app deploy` to deploy the application

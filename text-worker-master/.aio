@@ -1,0 +1,56 @@
+{
+  "project": {
+    "id": "4566206088344561068",
+    "name": "AEMp20252e52402",
+    "title": "AEM-p20252-e52402",
+    "description": "DO NOT DELETE. Automatically created by Cloud Manager for AEM environment adaptto2020-dev in program adaptto2020",
+    "org": {
+      "id": "30489",
+      "name": "adobe-odyssee",
+      "ims_org_id": "B40B3319554BCF177F000101@AdobeOrg"
+    },
+    "workspace": {
+      "id": "4566206088344561618",
+      "name": "Production",
+      "title": "AEM-p20252-e52402",
+      "description": "DO NOT DELETE. Automatically created by Cloud Manager for AEM environment adaptto2020-dev in program adaptto2020",
+      "action_url": "https://30489-aemp20252e52402.adobeioruntime.net",
+      "app_url": "https://30489-aemp20252e52402.adobeio-static.net",
+      "details": {
+        "credentials": [
+          {
+            "id": "109637",
+            "name": "AEM-p20252-e52402",
+            "integration_type": "service"
+          }
+        ],
+        "services": [
+          {
+            "code": "AdobeIOManagementAPISDK",
+            "name": "I/O Management API"
+          },
+          {
+            "code": "AssetComputeSDK",
+            "name": "Asset Compute"
+          },
+          {
+            "code": "ccai-sdk",
+            "name": "Content and Commerce AI"
+          },
+          {
+            "code": "CloudIntegrationSDK",
+            "name": "I/O Events"
+          },
+          {
+            "code": "McDtmSDK",
+            "name": "Experience Platform Launch API"
+          },
+          {
+            "code": "MCSmartContentServicesSDK",
+            "name": "Smart Content"
+          }
+        ]
+      }
+    }
+  }
+}

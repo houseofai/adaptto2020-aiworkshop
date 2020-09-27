@@ -1,0 +1,24 @@
+curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
+ -H "Authorization: Bearer eyJ4NXUiOiJpbXNfbmExLWtleS0xLmNlciIsImFsZyI6IlJTMjU2In0.eyJpZCI6IjE2MDEwNTE5NzQ1MDdfNzU4YjA0NWYtMDc5NC00ZWQxLWIzNGQtZTY3YzBlZmYyNTUzX3VlMSIsImNsaWVudF9pZCI6Ijc5MjU0NjgwMWY1NDQ4YzM5OTk2ZDIzMzUzN2I2N2IyIiwidXNlcl9pZCI6IjQ2NUIzQzM1NUY1MTM0QzIwQTQ5NUM5OEB0ZWNoYWNjdC5hZG9iZS5jb20iLCJ0eXBlIjoiYWNjZXNzX3Rva2VuIiwiYXMiOiJpbXMtbmExIiwiZmciOiJVWlZBT0VDREZMSDVZSDRHQzZCTFpQUUFBST09PT09PSIsIm1vaSI6IjE2Y2ZhY2YiLCJjIjoieFRDMGlMSEswVG9QVmJabGU2NG14Zz09IiwiZXhwaXJlc19pbiI6Ijg2NDAwMDAwIiwic2NvcGUiOiJhZG9iZWlvX2FwaSxvcGVuaWQsQWRvYmVJRCxyZWFkX29yZ2FuaXphdGlvbnMsYWRkaXRpb25hbF9pbmZvLnJvbGVzLGFkZGl0aW9uYWxfaW5mby5wcm9qZWN0ZWRQcm9kdWN0Q29udGV4dCxldmVudF9yZWNlaXZlcl9hcGkiLCJjcmVhdGVkX2F0IjoiMTYwMTA1MTk3NDUwNyJ9.nvjYTrPVdHUJbR1_1Q_1ALFyVAbfVUVdok715BY4DGb720cx7MTby3VlIf2L4ssQcWYtle7h1Euc0mG7rxMuwD4UY38nYctZuF1hlG7m71o4J1heanWsew6_oFpf2WArmf-uIWvXFwhZ6nsT2Jy4VD-pujNg-S9tkOZZ3CgbbZu8vwV0bDkVORC8YAIgfe77zMtHExF5l8gVkBeMb79cQz2-6g3qgiD9QbsunKuTrCxC0kS3NQSHPrTfEHvQeVEKak0cnH6qMdx9hvFm14yLSJzvAwJNI3cNCQwjwWwNbEqzkmDvFfpziGir0LmPTJ8fsQ-fSkdyUeS4uBhy_qYLqg"  \
+ -H "Content-Type: multipart/form-data" \
+ -H "cache-control: no-cache,no-cache"   \
+ -H "x-api-key: 792546801f5448c39996d233537b67b2"   \
+ -F file=@./sample.pdf   \
+ -F 'contentAnalyzerRequests={
+    "enable_diagnostics":"true",
+    "requests":[{
+      "analyzer_id": "Feature:cintel-ner:Service-7a87cb57461345c280b62470920bcdc5",
+      "content_id": "test123",                                                     
+      "parameters": {                                            
+        "application-id": "1234",                             
+        "content-type": "file",                                         
+        "encoding": "pdf",                                   
+        "data": [                                
+          {                                   
+            "content-id": "abc123",                 
+            "content": "file"         
+          }                  
+        ]                
+      }                
+    }]                 
+  }' 

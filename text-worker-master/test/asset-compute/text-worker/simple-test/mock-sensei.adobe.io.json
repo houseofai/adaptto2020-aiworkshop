@@ -1,0 +1,289 @@
+[{
+  "httpRequest": {
+    "method": "POST",
+    "path": "/services/v1/predict",
+    "headers": {
+      "Authorization": ["Bearer test-access-token"],
+      "x-api-key": ["test-client-id"]
+    },
+    "body": {
+      "type": "STRING",
+      "string": "{\"enable_diagnostics\":true,\"requests\":[{\"analyzer_id\":\"Feature:image-color-histogram:Service-e952f4acd7c2425199b476a2eb459635\",\"parameters\":{\"application-id\":\"1234\",\"content-type\":\"inline\",\"encoding\":\".jpg\",\"threshold\":\"0\",\"top-N\":\"0\",\"custom\":{},\"data\":[{\"content-id\":\"0987\",\"content\":\"inline-image\",\"content-type\":\"inline\",\"encoding\":\".jpg\",\"threshold\":\"0\",\"top-N\":\"0\",\"historic-metadata\":[],\"custom\":{\"exclude_mask\":1}}]}}]}",
+      "subString": true
+    }
+  },
+  "httpResponse": {
+    "statusCode": 200,
+    "body": {
+      "type": "JSON",
+      "matchType": "strict",
+      "json": {
+        "status": 200,
+        "content_id": "sample.pdf",
+        "cas_responses": [{
+          "status": 200,
+          "analyzer_id": "Feature:cintel-ner:Service-7a87cb57461345c280b62470920bcdc5",
+          "content_id": "sample.pdf",
+          "result": {
+            "response_type": "feature",
+            "response": [{
+              "feature_value": [{
+                  "feature_value": "success",
+                  "feature_name": "status"
+                },
+                {
+                  "feature_value": [{
+                      "feature_name": "virtual mechanics tutorials",
+                      "feature_value": [{
+                          "feature_value": 0.003622102514344666,
+                          "feature_name": "score"
+                        },
+                        {
+                          "feature_name": "type",
+                          "feature_value": "KEYWORD"
+                        }
+                      ]
+                    },
+                    {
+                      "feature_value": [{
+                          "feature_name": "score",
+                          "feature_value": 0.1545681747857846
+                        },
+                        {
+                          "feature_name": "type",
+                          "feature_value": "KEYWORD"
+                        }
+                      ],
+                      "feature_name": "simple pdf file"
+                    },
+                    {
+                      "feature_name": "pdf file",
+                      "feature_value": [{
+                          "feature_value": 0.10544937547988459,
+                          "feature_name": "score"
+                        },
+                        {
+                          "feature_name": "type",
+                          "feature_value": "KEYWORD"
+                        }
+                      ]
+                    },
+                    {
+                      "feature_name": "stuff",
+                      "feature_value": [{
+                          "feature_value": 0.9313673793892148,
+                          "feature_name": "score"
+                        },
+                        {
+                          "feature_value": "KEYWORD",
+                          "feature_name": "type"
+                        }
+                      ]
+                    },
+                    {
+                      "feature_name": "file",
+                      "feature_value": [{
+                          "feature_value": 0.1641840685611455,
+                          "feature_name": "score"
+                        },
+                        {
+                          "feature_value": "KEYWORD",
+                          "feature_name": "type"
+                        }
+                      ]
+                    },
+                    {
+                      "feature_name": "boring typing",
+                      "feature_value": [{
+                          "feature_name": "score",
+                          "feature_value": 3.2982918318356855
+                        },
+                        {
+                          "feature_name": "type",
+                          "feature_value": "KEYWORD"
+                        }
+                      ]
+                    },
+                    {
+                      "feature_value": [{
+                          "feature_value": 0.16263761019669376,
+                          "feature_name": "score"
+                        },
+                        {
+                          "feature_name": "type",
+                          "feature_value": "KEYWORD"
+                        }
+                      ],
+                      "feature_name": "pdf"
+                    },
+                    {
+                      "feature_value": [{
+                          "feature_name": "score",
+                          "feature_value": 0.9345301566484295
+                        },
+                        {
+                          "feature_value": "KEYWORD",
+                          "feature_name": "type"
+                        }
+                      ],
+                      "feature_name": "paint"
+                    },
+                    {
+                      "feature_value": [{
+                          "feature_name": "score",
+                          "feature_value": 0.326977053381904
+                        },
+                        {
+                          "feature_value": "KEYWORD",
+                          "feature_name": "type"
+                        }
+                      ],
+                      "feature_name": "small demonstration"
+                    },
+                    {
+                      "feature_name": "tutorials",
+                      "feature_value": [{
+                          "feature_value": 0.4906808981101747,
+                          "feature_name": "score"
+                        },
+                        {
+                          "feature_value": "KEYWORD",
+                          "feature_name": "type"
+                        }
+                      ]
+                    },
+                    {
+                      "feature_value": [{
+                          "feature_value": 0.08236612075236552,
+                          "feature_name": "score"
+                        },
+                        {
+                          "feature_value": "KEYWORD",
+                          "feature_name": "type"
+                        }
+                      ],
+                      "feature_name": "mechanics"
+                    },
+                    {
+                      "feature_name": "mechanics tutorials",
+                      "feature_value": [{
+                          "feature_value": 0.042117688802716005,
+                          "feature_name": "score"
+                        },
+                        {
+                          "feature_value": "KEYWORD",
+                          "feature_name": "type"
+                        }
+                      ]
+                    },
+                    {
+                      "feature_value": [{
+                          "feature_name": "score",
+                          "feature_value": 0.9334433929798648
+                        },
+                        {
+                          "feature_value": "KEYWORD",
+                          "feature_name": "type"
+                        }
+                      ],
+                      "feature_name": "end"
+                    },
+                    {
+                      "feature_value": [{
+                          "feature_value": 0.0059471572117208915,
+                          "feature_name": "score"
+                        },
+                        {
+                          "feature_name": "type",
+                          "feature_value": "KEYWORD"
+                        }
+                      ],
+                      "feature_name": "text"
+                    },
+                    {
+                      "feature_value": [{
+                          "feature_name": "score",
+                          "feature_value": 6.731830229221454
+                        },
+                        {
+                          "feature_value": "KEYWORD",
+                          "feature_name": "type"
+                        }
+                      ],
+                      "feature_name": "paint dry"
+                    },
+                    {
+                      "feature_name": "page",
+                      "feature_value": [{
+                          "feature_value": 0.4340705817569419,
+                          "feature_name": "score"
+                        },
+                        {
+                          "feature_name": "type",
+                          "feature_value": "KEYWORD"
+                        }
+                      ]
+                    },
+                    {
+                      "feature_value": [{
+                          "feature_name": "score",
+                          "feature_value": 0.9342488024752809
+                        },
+                        {
+                          "feature_value": "KEYWORD",
+                          "feature_name": "type"
+                        }
+                      ],
+                      "feature_name": "typing"
+                    },
+                    {
+                      "feature_value": [{
+                          "feature_name": "score",
+                          "feature_value": 0.4906808981101747
+                        },
+                        {
+                          "feature_name": "type",
+                          "feature_value": "KEYWORD"
+                        }
+                      ],
+                      "feature_name": "demonstration"
+                    },
+                    {
+                      "feature_value": [{
+                          "feature_name": "score",
+                          "feature_value": 0.0
+                        },
+                        {
+                          "feature_value": "ORG",
+                          "feature_name": "type"
+                        }
+                      ],
+                      "feature_name": "Virtual Mechanics"
+                    },
+                    {
+                      "feature_name": "simple pdf",
+                      "feature_value": [{
+                          "feature_name": "score",
+                          "feature_value": 0.20442937778405323
+                        },
+                        {
+                          "feature_name": "type",
+                          "feature_value": "KEYWORD"
+                        }
+                      ]
+                    }
+                  ],
+                  "feature_name": "labels"
+                }
+              ],
+              "feature_name": "abc123"
+            }]
+          }
+        }],
+        "error": [
+
+        ]
+      }
+    }
+  }
+}]
