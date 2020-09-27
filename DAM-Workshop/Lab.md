@@ -189,7 +189,7 @@ Please take a look at the [Official Color Extraction Documentation](https://docs
 - Click on Edit
 - Click on + to add a new Sensei CCAI tab
 - Click on "Build Form"
-- Drag "Single Line Text" on the form
+- Drag "Multi Value Text" on the form
   - Name: Color Names
   - Map to      property: ./jcr:content/metadata/ccai:colorNames
 
