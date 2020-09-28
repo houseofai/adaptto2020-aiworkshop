@@ -20,9 +20,7 @@
 
 ## Adding Credentials - Custom Worker Contd
 
-Since you logged in during app creation, most of the credentials are already collected in your `.env` file. You only need to add a few credentials needed for the [developer tool](https://git.corp.adobe.com/nui/nui/blob/master/doc/developer/CustomWorkerDeveloperGuide.md#developer-tool-credentials).
-
-*If you did not log in, read this document to [set up credentials manually](https://git.corp.adobe.com/nui/nui/blob/master/doc/developer/SettingUpCredentialsManually.md).*
+Since you logged in during app creation, most of the credentials are already collected in your `.env` file.If you face any issue contact lab instructor.
 
 ### Developer Tool Credentials
 
