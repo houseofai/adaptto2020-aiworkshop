@@ -1,4 +1,4 @@
-# DAM-Workshop
+# AI Workshop (2nd part) - Data Science
 
 Please go through the following guides in order:
 
